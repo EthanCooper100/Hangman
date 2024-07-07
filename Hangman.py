@@ -1,0 +1,17 @@
+import tkinter as tk
+from tkinter import *
+application = tk.Tk()
+a = application.attributes("-fullscreen", True)
+application.geometry(a)
+application.title("Hangman")
+# subtitle = Label(application, text = "Welcome to Hangman!")
+# subtitle.pack()
+startbutton = tk.Button(application, text = "Start", height = 10)
+startbutton.grid(row = 10, column = 0, sticky = "ew")
+endbutton = tk.Button(application, text = "Exit", height = 10, command = application.destroy)
+endbutton.grid(row = 10, column = 1, sticky = "ew")
+application.grid_rowconfigure(2, weight=1)
+application.grid_columnconfigure(0, weight=1)
+application.grid_columnconfigure(1, weight=1)
+# button.pack()
+application.mainloop()
